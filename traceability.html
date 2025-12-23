@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Trace Your Batch | Soup & Story</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="navbar">
+    <a class="brand" href="index.html">
+      <div class="logo">🍲</div>
+      <strong>Soup & Story</strong>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="products.html">Soups</a></li>
+        <li><a href="wholesale.html">Wholesale</a></li>
+        <li><a href="traceability.html">Trace</a></li>
+        <li><a href="about.html">Our Story</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section>
+  <h1>Trace Your Batch</h1>
+  <p>
+    Enter the batch code from your box (near the QR code). This page is designed to be the QR destination.
+  </p>
+
+  <div class="card">
+    <h2>Batch code</h2>
+    <p>Example format: <strong>TB-250123-A</strong></p>
+    <input id="batch" type="text" placeholder="Enter your batch code" style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8;">
+    <p style="margin-top:10px;">
+      Tip: for now, use the table below to match your batch. Later we can automate lookup.
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Recent batches (example table)</h2>
+    <div style="overflow-x:auto;">
+      <table style="width:100%; border-collapse:collapse;">
+        <thead>
+          <tr>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #e2cda8;">Batch code</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #e2cda8;">Soup</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #e2cda8;">Cook date</th>
+            <th style="text-align:left; padding:10px; border-bottom:1px solid #e2cda8;">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e2cda8;">LM-250101-A</td>
+            <td style="padding:10px; border-bottom:1px solid #e2cda8;">Leek & Mushroom</td>
+            <td style="padding:10px; border-bottom:1px solid #e2cda8;">Jan 1, 2025</td>
+            <td style="padding:10px; border-bottom:1px solid #e2cda8;">Regular + vegetarian made same day</td>
+          </tr>
+          <tr>
+            <td style="padding:10px; border-bottom:1px solid #e2cda8;">TB-250101-B</td>
+            <td style="padding:10px; border-bottom:1px solid #e2cda8;">Tomato & Barley</td>
+            <td style="padding:10px; border-bottom:1px solid #e2cda8;">Jan 1, 2025</td>
+            <td style="padding:10px; border-bottom:1px solid #e2cda8;">Great with grilled cheese</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Shipping & handling reminder</h2>
+    <p>
+      Frozen product. Store in freezer immediately. If shipped overnight with dry ice, handle dry ice carefully
+      and keep away from children and pets.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <div>© Soup & Story</div>
+  <div><a href="products.html">Back to soups</a></div>
+</footer>
+
+</body>
+</html>
