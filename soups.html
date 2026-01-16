@@ -1,80 +1,282 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Our Soups | Soup & Story</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+/* Soup & Story — Warm / Chef-crafted style */
 
-<header>
-  <div class="navbar">
-    <a class="brand" href="index.html">
-      <div class="logo">🍲</div>
-      <strong>Soup & Story</strong>
-    </a>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a class="active" href="soups.html">Our Soups</a></li>
-        <li><a href="inquiry.html">Café / Restaurant</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+:root{
+  --bg: #fff6ea;          /* warm cream */
+  --paper: #fffaf3;       /* card background */
+  --ink: #1f1a16;         /* deep brown-black */
+  --muted: #5a4a3f;       /* warm muted text */
+  --line: #e7cfad;        /* warm border */
+  --accent: #b7793a;      /* caramel */
+  --accent-2: #7a4a22;    /* deeper caramel */
+  --shadow: 0 10px 24px rgba(31, 26, 22, 0.08);
+  --radius: 18px;
+  --max: 1040px;
+}
 
-<main>
-  <section>
-    <div class="kicker">Our Collection</div>
-    <h1>Our Soups</h1>
-    <p>Vibrant vegetable blends to cozy classics — designed to feel intentional and comforting.</p>
+*{ box-sizing:border-box; }
+html, body{ height:100%; }
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.55;
+}
 
-    <div class="grid">
-      <div class="card">
-        <h2>Leek & Mushroom</h2>
-        <p>Rich, cozy, earthy. Sautéed leeks, roasted mushrooms, and potatoes.</p>
-      </div>
-      <div class="card">
-        <h2>Parsnip & Purple Yam</h2>
-        <p>Smooth, earthy, lightly sweet — naturally vibrant.</p>
-      </div>
-      <div class="card">
-        <h2>Carrot & Orange</h2>
-        <p>Velvety, bright, naturally sweet — lifted with citrus.</p>
-      </div>
-      <div class="card">
-        <h2>Tomato & Barley</h2>
-        <p>Hearty tomato soup with barley — balanced and comforting.</p>
-      </div>
-      <div class="card">
-        <h2>White Bean</h2>
-        <p>Hearty, protein-rich pottage with vegetables — nourishing and satisfying.</p>
-      </div>
-      <div class="card">
-        <h2>Seasonal Rotations</h2>
-        <p>Limited batches inspired by local produce and the season.</p>
-      </div>
-    </div>
+a{ color: inherit; }
+a:hover{ opacity: .92; }
 
-    <div class="card" style="margin-top:14px;">
-      <h2>How to Prepare</h2>
-      <ol class="list-check">
-        <li>Choose your soup</li>
-        <li>Heat gently and add water or milk as directed</li>
-        <li>Stir, taste, and enjoy</li>
-      </ol>
-      <div class="actions">
-        <a class="button primary" href="inquiry.html">Serve at your café</a>
-        <a class="button" href="index.html">Back to Home</a>
-      </div>
-    </div>
-  </section>
-</main>
+main{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 26px 18px 48px;
+}
 
-<footer>
-  <div>© Soup & Story</div>
-</footer>
+section{
+  margin: 26px 0;
+}
 
-</body>
-</html>
+h1{
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.1;
+  margin: 10px 0 10px;
+  letter-spacing: -0.02em;
+}
+h2{
+  font-size: 20px;
+  margin: 0 0 10px;
+  letter-spacing: -0.01em;
+}
+p{ margin: 10px 0; color: var(--muted); }
+strong{ color: var(--ink); }
+
+.kicker{
+  display:inline-block;
+  font-size: 13px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent-2);
+  background: rgba(231, 207, 173, .35);
+  border: 1px solid rgba(231, 207, 173, .8);
+  padding: 7px 10px;
+  border-radius: 999px;
+}
+
+/* Header + Nav */
+header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255, 246, 234, .82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(231, 207, 173, .7);
+}
+.navbar{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 12px 18px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  text-decoration:none;
+}
+.logo{
+  width: 38px;
+  height: 38px;
+  display:grid;
+  place-items:center;
+  border-radius: 12px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: 0 6px 14px rgba(31,26,22,.06);
+}
+
+nav ul{
+  list-style:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+nav a{
+  text-decoration:none;
+  display:inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 14px;
+}
+nav a:hover{
+  border-color: rgba(231, 207, 173, .9);
+  background: rgba(255, 250, 243, .85);
+}
+nav a.active{
+  background: rgba(183, 121, 58, .12);
+  border-color: rgba(183, 121, 58, .35);
+  color: var(--accent-2);
+}
+
+/* Cards */
+.card{
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.card h2{ color: var(--ink); }
+.card p{ color: var(--muted); }
+
+/* Layout helpers */
+.grid{
+  display:grid;
+  gap: 14px;
+  grid-template-columns: repeat(12, 1fr);
+}
+.grid > .card{ grid-column: span 12; }
+
+.hero{
+  display:grid;
+  gap: 14px;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+@media (min-width: 880px){
+  .hero{
+    grid-template-columns: 1.15fr .85fr;
+  }
+}
+
+/* Buttons + actions */
+.actions{
+  display:flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.button{
+  display:inline-block;
+  text-decoration:none;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(231, 207, 173, .95);
+  background: rgba(255, 250, 243, .95);
+  color: var(--ink);
+  transition: transform .08s ease, box-shadow .15s ease, background .15s ease;
+}
+.button:hover{
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(31,26,22,.08);
+}
+.button:active{
+  transform: translateY(1px);
+}
+
+.button.primary{
+  border-color: rgba(183, 121, 58, .5);
+  background: linear-gradient(180deg, rgba(183,121,58,.20), rgba(183,121,58,.12));
+  color: var(--accent-2);
+}
+
+/* Lists (check style) */
+.list-check{
+  margin: 12px 0 0;
+  padding-left: 0;
+  list-style: none;
+  color: var(--muted);
+}
+.list-check li{
+  position: relative;
+  padding-left: 26px;
+  margin: 8px 0;
+}
+.list-check li::before{
+  content: "✓";
+  position:absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent);
+  font-weight: 800;
+}
+
+ol.list-check{
+  padding-left: 0;
+  list-style: none;
+  counter-reset: step;
+}
+ol.list-check li{
+  padding-left: 30px;
+}
+ol.list-check li::before{
+  content: counter(step);
+  counter-increment: step;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  display:grid;
+  place-items:center;
+  background: rgba(183,121,58,.14);
+  border: 1px solid rgba(183,121,58,.35);
+  color: var(--accent-2);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+/* Separator */
+.sep{
+  border: 0;
+  height: 1px;
+  background: rgba(231, 207, 173, .9);
+  margin: 18px 0;
+}
+
+/* Forms */
+label{
+  font-weight: 700;
+  color: var(--ink);
+}
+input, select, textarea{
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .85);
+  color: var(--ink);
+  outline: none;
+}
+textarea{ min-height: 150px; }
+input:focus, select:focus, textarea:focus{
+  border-color: rgba(183,121,58,.55);
+  box-shadow: 0 0 0 4px rgba(183,121,58,.10);
+}
+
+/* Footer */
+footer{
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 26px 18px 34px;
+  color: rgba(31,26,22,.70);
+  font-size: 14px;
+}
+
+/* Grid columns on larger screens */
+@media (min-width: 780px){
+  .grid > .card{ grid-column: span 6; } /* 2 columns */
+}
+@media (min-width: 1040px){
+  .grid > .card{ grid-column: span 4; } /* 3 columns */
+}
