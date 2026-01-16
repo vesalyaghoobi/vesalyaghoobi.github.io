@@ -1,282 +1,146 @@
-/* Soup & Story — Warm / Chef-crafted style */
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Our Soups | Soup & Story</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Soup & Story’s small-batch, hand-prepared soups. Fully cooked and frozen at their best—finished at home for a gourmet, homemade experience.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-:root{
-  --bg: #fff6ea;          /* warm cream */
-  --paper: #fffaf3;       /* card background */
-  --ink: #1f1a16;         /* deep brown-black */
-  --muted: #5a4a3f;       /* warm muted text */
-  --line: #e7cfad;        /* warm border */
-  --accent: #b7793a;      /* caramel */
-  --accent-2: #7a4a22;    /* deeper caramel */
-  --shadow: 0 10px 24px rgba(31, 26, 22, 0.08);
-  --radius: 18px;
-  --max: 1040px;
-}
+<header>
+  <div class="navbar">
+    <a class="brand" href="index.html">
+      <div class="logo">🍲</div>
+      <strong>Soup & Story</strong>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a class="active" href="soups.html">Our Soups</a></li>
+        <li><a href="inquiry.html">Café / Restaurant</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-*{ box-sizing:border-box; }
-html, body{ height:100%; }
-body{
-  margin:0;
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-  background: var(--bg);
-  color: var(--ink);
-  line-height: 1.55;
-}
+<main>
 
-a{ color: inherit; }
-a:hover{ opacity: .92; }
+  <!-- INTRO -->
+  <section>
+    <div class="kicker">Our Collection</div>
+    <h1>Soups that taste homemade—because they are.</h1>
+    <p>
+      Our soups are fully cooked, frozen at their best, and finished at home for a bowl that feels
+      intentional and comforting. Each recipe is crafted for balance: rich, layered flavor without heaviness.
+    </p>
 
-main{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 26px 18px 48px;
-}
+    <div class="actions">
+      <a class="button primary" href="inquiry.html">Serve Soup & Story at your café</a>
+      <a class="button" href="index.html">Back to Home</a>
+    </div>
+  </section>
 
-section{
-  margin: 26px 0;
-}
+  <!-- GRID OF SOUPS -->
+  <section>
+    <div class="grid">
 
-h1{
-  font-size: clamp(30px, 4vw, 44px);
-  line-height: 1.1;
-  margin: 10px 0 10px;
-  letter-spacing: -0.02em;
-}
-h2{
-  font-size: 20px;
-  margin: 0 0 10px;
-  letter-spacing: -0.01em;
-}
-p{ margin: 10px 0; color: var(--muted); }
-strong{ color: var(--ink); }
+      <div class="card">
+        <h2>Leek & Mushroom</h2>
+        <p>
+          Rich, cozy, and earthy—built on sautéed leeks, roasted mushrooms, and potatoes.
+          A classic comfort bowl with depth.
+        </p>
+        <p><strong>Allergens:</strong> Soy (regular). Vegetarian version available.</p>
+        <!-- Future image slot: add later if you want
+        <img src="images/leek-mushroom.jpg" alt="Leek & Mushroom soup" style="width:100%; border-radius:14px; margin-top:12px; border:1px solid #e7cfad;">
+        -->
+      </div>
 
-.kicker{
-  display:inline-block;
-  font-size: 13px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--accent-2);
-  background: rgba(231, 207, 173, .35);
-  border: 1px solid rgba(231, 207, 173, .8);
-  padding: 7px 10px;
-  border-radius: 999px;
-}
+      <div class="card">
+        <h2>Parsnip & Purple Yam</h2>
+        <p>
+          Smooth, earthy, lightly sweet—naturally vibrant with a beautiful purple hue.
+          Elegant and comforting.
+        </p>
+        <p><strong>Allergens:</strong> Soy. Vegetarian version available.</p>
+      </div>
 
-/* Header + Nav */
-header{
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(255, 246, 234, .82);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(231, 207, 173, .7);
-}
-.navbar{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 12px 18px;
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  gap: 14px;
-}
+      <div class="card">
+        <h2>Carrot & Orange</h2>
+        <p>
+          Velvety and bright—naturally sweet carrots with a lift of citrus.
+          Clean, fresh flavor with a silky finish.
+        </p>
+        <p><strong>Allergens:</strong> Soy, milk, cashew (regular). Vegetarian version available.</p>
+      </div>
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap: 10px;
-  text-decoration:none;
-}
-.logo{
-  width: 38px;
-  height: 38px;
-  display:grid;
-  place-items:center;
-  border-radius: 12px;
-  background: var(--paper);
-  border: 1px solid var(--line);
-  box-shadow: 0 6px 14px rgba(31,26,22,.06);
-}
+      <div class="card">
+        <h2>Tomato & Barley</h2>
+        <p>
+          Hearty tomato soup with barley—finished with lemon and parsley for a clean, savory balance.
+          Cozy, not heavy.
+        </p>
+        <p><strong>Allergens:</strong> Soy, milk (regular). Vegetarian version available.</p>
+      </div>
 
-nav ul{
-  list-style:none;
-  margin:0;
-  padding:0;
-  display:flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-}
-nav a{
-  text-decoration:none;
-  display:inline-block;
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid transparent;
-  color: var(--ink);
-  font-weight: 600;
-  font-size: 14px;
-}
-nav a:hover{
-  border-color: rgba(231, 207, 173, .9);
-  background: rgba(255, 250, 243, .85);
-}
-nav a.active{
-  background: rgba(183, 121, 58, .12);
-  border-color: rgba(183, 121, 58, .35);
-  color: var(--accent-2);
-}
+      <div class="card">
+        <h2>White Bean</h2>
+        <p>
+          A hearty, protein-rich pottage with white beans and vegetables.
+          Deep comfort with a wholesome, satisfying texture.
+        </p>
+        <p><strong>Allergens:</strong> Soy. Vegetarian version available.</p>
+      </div>
 
-/* Cards */
-.card{
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow);
-}
-.card h2{ color: var(--ink); }
-.card p{ color: var(--muted); }
+      <div class="card">
+        <h2>Cream of Vegetables</h2>
+        <p>
+          Vegetable-forward and smooth—lifted with paprika and lemon.
+          A bright, comforting everyday favorite.
+        </p>
+        <p><strong>Allergens:</strong> Soy. Vegetarian version available.</p>
+      </div>
 
-/* Layout helpers */
-.grid{
-  display:grid;
-  gap: 14px;
-  grid-template-columns: repeat(12, 1fr);
-}
-.grid > .card{ grid-column: span 12; }
+    </div>
+  </section>
 
-.hero{
-  display:grid;
-  gap: 14px;
-  grid-template-columns: 1fr;
-  align-items: start;
-}
-@media (min-width: 880px){
-  .hero{
-    grid-template-columns: 1.15fr .85fr;
-  }
-}
+  <!-- HOW IT WORKS -->
+  <section>
+    <div class="card">
+      <h2>How to prepare</h2>
+      <ol class="list-check">
+        <li>Choose your soup</li>
+        <li>Heat gently and add water or milk as directed</li>
+        <li>Stir, taste, and enjoy</li>
+      </ol>
+      <p>
+        No complicated steps. No compromises on flavor.
+      </p>
+    </div>
+  </section>
 
-/* Buttons + actions */
-.actions{
-  display:flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 14px;
-}
+  <!-- CTA -->
+  <section>
+    <div class="card">
+      <h2>Want Soup & Story at your café or restaurant?</h2>
+      <p>
+        We offer hand-prepared soups designed for consistent quality and easy service.
+        Reach out and we’ll follow up with availability and next steps.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="inquiry.html">Café / restaurant inquiry</a>
+        <a class="button" href="mailto:vesalyaghoobi@icloud.com">Email us</a>
+      </div>
+    </div>
+  </section>
 
-.button{
-  display:inline-block;
-  text-decoration:none;
-  font-weight: 700;
-  font-size: 14px;
-  padding: 10px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(231, 207, 173, .95);
-  background: rgba(255, 250, 243, .95);
-  color: var(--ink);
-  transition: transform .08s ease, box-shadow .15s ease, background .15s ease;
-}
-.button:hover{
-  background: #ffffff;
-  box-shadow: 0 10px 20px rgba(31,26,22,.08);
-}
-.button:active{
-  transform: translateY(1px);
-}
+</main>
 
-.button.primary{
-  border-color: rgba(183, 121, 58, .5);
-  background: linear-gradient(180deg, rgba(183,121,58,.20), rgba(183,121,58,.12));
-  color: var(--accent-2);
-}
+<footer>
+  <div>© Soup & Story</div>
+</footer>
 
-/* Lists (check style) */
-.list-check{
-  margin: 12px 0 0;
-  padding-left: 0;
-  list-style: none;
-  color: var(--muted);
-}
-.list-check li{
-  position: relative;
-  padding-left: 26px;
-  margin: 8px 0;
-}
-.list-check li::before{
-  content: "✓";
-  position:absolute;
-  left: 0;
-  top: 0;
-  color: var(--accent);
-  font-weight: 800;
-}
-
-ol.list-check{
-  padding-left: 0;
-  list-style: none;
-  counter-reset: step;
-}
-ol.list-check li{
-  padding-left: 30px;
-}
-ol.list-check li::before{
-  content: counter(step);
-  counter-increment: step;
-  width: 22px;
-  height: 22px;
-  border-radius: 999px;
-  display:grid;
-  place-items:center;
-  background: rgba(183,121,58,.14);
-  border: 1px solid rgba(183,121,58,.35);
-  color: var(--accent-2);
-  font-size: 12px;
-  font-weight: 800;
-}
-
-/* Separator */
-.sep{
-  border: 0;
-  height: 1px;
-  background: rgba(231, 207, 173, .9);
-  margin: 18px 0;
-}
-
-/* Forms */
-label{
-  font-weight: 700;
-  color: var(--ink);
-}
-input, select, textarea{
-  width: 100%;
-  padding: 10px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
-  background: rgba(255, 255, 255, .85);
-  color: var(--ink);
-  outline: none;
-}
-textarea{ min-height: 150px; }
-input:focus, select:focus, textarea:focus{
-  border-color: rgba(183,121,58,.55);
-  box-shadow: 0 0 0 4px rgba(183,121,58,.10);
-}
-
-/* Footer */
-footer{
-  max-width: var(--max);
-  margin: 0 auto;
-  padding: 26px 18px 34px;
-  color: rgba(31,26,22,.70);
-  font-size: 14px;
-}
-
-/* Grid columns on larger screens */
-@media (min-width: 780px){
-  .grid > .card{ grid-column: span 6; } /* 2 columns */
-}
-@media (min-width: 1040px){
-  .grid > .card{ grid-column: span 4; } /* 3 columns */
-}
+</body>
+</html>
