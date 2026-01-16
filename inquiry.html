@@ -62,63 +62,103 @@
       </div>
 
       <div class="card">
-        <h2>How to inquire</h2>
+        <h2>What happens next</h2>
         <p>
-          Email us with your name, business name, location, and expected weekly volume.
-          We’ll follow up with availability and next steps.
+          We reply within <strong>1–2 business days</strong>.
+          We’ll confirm availability, answer questions, and outline next steps.
         </p>
-        <p>
-          <strong>Preferred contact:</strong><br>
-          <a href="mailto:hello@soupandstory.com">hello@soupandstory.com</a>
+        <p style="margin-top:10px;">
+          Prefer email? <strong><a href="mailto:vesalyaghoobi@icloud.com">vesalyaghoobi@icloud.com</a></strong>
         </p>
       </div>
     </div>
   </section>
 
-  <!-- OPTIONAL FORM -->
+  <!-- LIVE FORM -->
   <section>
     <div class="card">
-      <h2>Quick inquiry form</h2>
+      <h2>Inquiry form</h2>
       <p>
-        This form is optional and currently informational.
-        If you'd like, we can connect it to a free form service so submissions go directly to your email.
+        Send a quick note and we’ll follow up.
+        Submissions are emailed directly to <strong>vesalyaghoobi@icloud.com</strong>.
       </p>
 
-      <form>
+      <form action="https://formspree.io/f/mwvvpjdn" method="POST">
+
+        <!-- Honeypot for spam -->
+        <input type="text" name="_gotcha" style="display:none">
+
         <p>
-          <label>Name<br>
-            <input type="text" placeholder="Your name"
-              style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8;">
-          </label>
+          <label for="name">Name</label><br>
+          <input id="name" name="name" type="text" required
+            placeholder="Your name"
+            style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8;">
         </p>
 
         <p>
-          <label>Business name<br>
-            <input type="text" placeholder="Café or restaurant name"
-              style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8;">
-          </label>
+          <label for="business">Business name</label><br>
+          <input id="business" name="business" type="text" required
+            placeholder="Café or restaurant name"
+            style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8;">
         </p>
 
         <p>
-          <label>City & state<br>
-            <input type="text" placeholder="e.g., New Haven, CT"
-              style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8;">
-          </label>
+          <label for="location">City & state</label><br>
+          <input id="location" name="location" type="text" required
+            placeholder="e.g., New Haven, CT"
+            style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8;">
         </p>
 
         <p>
-          <label>Message<br>
-            <textarea placeholder="Tell us about your needs (volume, format, timeline)"
-              style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8; min-height:140px;"></textarea>
-          </label>
+          <label for="email">Email</label><br>
+          <input id="email" name="email" type="email" required
+            placeholder="name@business.com"
+            style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8;">
         </p>
 
         <p>
-          <button type="button" class="button primary">
-            Send inquiry (coming soon)
-          </button>
+          <label for="volume">Estimated weekly volume</label><br>
+          <select id="volume" name="weekly_volume" required
+            style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8; background:#fff;">
+            <option value="" disabled selected>Select one</option>
+            <option>10–25 servings / week</option>
+            <option>25–50 servings / week</option>
+            <option>50–100 servings / week</option>
+            <option>100+ servings / week</option>
+            <option>Not sure yet</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="timeline">When are you looking to start?</label><br>
+          <select id="timeline" name="start_timeline" required
+            style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8; background:#fff;">
+            <option value="" disabled selected>Select one</option>
+            <option>ASAP</option>
+            <option>2–4 weeks</option>
+            <option>1–3 months</option>
+            <option>Just exploring</option>
+          </select>
+        </p>
+
+        <p>
+          <label for="message">Message</label><br>
+          <textarea id="message" name="message" required
+            placeholder="Tell us about your needs (format, volume, timeline, questions)"
+            style="width:100%; padding:10px; border-radius:10px; border:1px solid #e2cda8; min-height:160px;"></textarea>
+        </p>
+
+        <!-- Email subject -->
+        <input type="hidden" name="_subject" value="New Café / Restaurant Inquiry — Soup & Story">
+
+        <p>
+          <button type="submit" class="button primary">Send inquiry</button>
         </p>
       </form>
+
+      <p style="margin-top:10px;">
+        Or email directly: <a href="mailto:vesalyaghoobi@icloud.com">vesalyaghoobi@icloud.com</a>
+      </p>
     </div>
   </section>
 
